@@ -2,6 +2,12 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
 
+const cardStyle = {
+	background: "#343a40",
+	fontSize: "1.5rem",
+	border: "3px solid #dark"
+};
+
 export class MyCard extends React.Component {
 	constructor(props) {
 		super(props);
@@ -24,7 +30,9 @@ export class MyCard extends React.Component {
 		return (
 			<Card className="col-1" bg="dark" text="light">
 				<Card.Body>
-					<Card.Title>{this.state.value}</Card.Title>
+					<Card.Title style={cardStyle}>
+						{this.state.value}
+					</Card.Title>
 				</Card.Body>
 			</Card>
 		);
