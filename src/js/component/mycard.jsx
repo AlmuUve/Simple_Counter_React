@@ -24,12 +24,27 @@ export class MyCard extends React.Component {
 	}
 
 	componentDidMount() {
+		this.startTimer();
+	}
+	componentDidUpdate(prevProps) {
+		console.log(this.props.myreset);
+		if (prevProps.myreset != this.props.myreset) {
+			//console.log(this.props.myreset);
+			this.resetTimer();
+		}
+	}
+	startTimer() {
 		this.interval = setInterval(() => this.tick(), this.state.timer);
 	}
+	resetTimer() {
+		clearInterval(this.state.timer);
+		this.startTimer();
+	}
+
 	render() {
 		return (
 			<Card className="col-1" bg="dark" text="light">
-				<Card.Body>
+				<Card.Body className="d-flex align-self-center">
 					<Card.Title style={cardStyle}>
 						{this.state.value}
 					</Card.Title>
@@ -41,5 +56,6 @@ export class MyCard extends React.Component {
 
 MyCard.propTypes = {
 	value: PropTypes.any,
-	mytime: PropTypes.number
+	mytime: PropTypes.number,
+	myreset: PropTypes.bool
 };
