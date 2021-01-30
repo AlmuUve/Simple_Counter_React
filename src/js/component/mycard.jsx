@@ -27,9 +27,7 @@ export class MyCard extends React.Component {
 		this.startTimer();
 	}
 	componentDidUpdate(prevProps) {
-		console.log(this.props.myreset);
 		if (prevProps.myreset != this.props.myreset) {
-			//console.log(this.props.myreset);
 			this.resetTimer();
 		}
 	}

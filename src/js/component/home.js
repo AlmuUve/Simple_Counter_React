@@ -28,22 +28,10 @@ export function Home() {
 
 	return (
 		<div>
-			<div className="row p-5">
-				<Button className="offset-3 col-2 p-3 mr-2" variant="warning">
-					Stop
-				</Button>{" "}
-				<Button
-					onClick={() => {
-						//	console.log("home", resetTime);
-						switchMyReset();
-					}}
-					className="col-2 mr-2"
-					variant="danger">
-					Reset
-				</Button>{" "}
-				<Button className="col-2" variant="secondary">
-					Resume
-				</Button>{" "}
+			<div className="container">
+				<i className="fas fa-exclamation-triangle" />
+				<span>DANGER!</span>
+				<i className="fas fa-exclamation-triangle" />
 			</div>
 			<CardDeck
 				className="p-4 m-auto w-75 d-flex justify-content-center"
