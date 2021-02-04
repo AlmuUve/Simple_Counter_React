@@ -24,3 +24,23 @@ span {
     padding: 3rem;
     margin-top: 1rem;
 }
+
+.card {
+	background: #343a40;
+	font-size: 1.5rem;
+	border: 3px solid dark
+};
+
+.cardDeck {
+	background: #343a40;
+	border: 3px solid #FF0000;
+	margin-left: 0
+};
+
+.far {
+	color: white;
+	display: flex;
+	justify-content: center;
+	font-size: 2rem;
+	margin-top: 1rem
+};
